@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.todo-list {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  /* Applying flex: 1 to one of the divs in a flex container will cause that div to grow and take
+   up as much remaining space as possible, while the other div will only occupy its minimum required width.*/
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.input-section .add-btn {
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.input-section .add-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+  display: flex;
+  gap: 10px; /* Adjust this value to reduce the space between buttons */
+}
+
+
+
+.todo-item p {
+  margin: 0;
+}
+
+.todo-item p.completed {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.actions {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.actions .edit-btn,
+.actions .delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 12px; /* Button padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.actions .edit-btn i,
+.actions .delete-btn i {
+  margin-left: 5px; /* Add space between text and icon */
+}
+
+.actions .delete-btn {
+  background-color: #ffdddd; /* Light red background for delete */
+  color: #d9534f; /* Red text color */
+}
+
+.actions .delete-btn:hover {
+  background-color: #f5b7b7; /* Darker red on hover */
+}
+
+.actions .edit-btn {
+  background-color: #ddffdd; /* Light green background for edit */
+  color: #5cb85c; /* Green text color */
+}
+
+.actions .edit-btn:hover {
+  background-color: #b7f5b7; /* Darker green on hover */
+}
+
